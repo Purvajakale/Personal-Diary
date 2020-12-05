@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_diary/PasswordChangedSuccessfully.dart';
+import 'package:jour/PasswordChangedSuccessfully.dart';
 import 'LoginPage.dart';
 
 class ResetPassword extends StatelessWidget {
@@ -39,7 +39,7 @@ class _resetPasswordState extends State<resetPassword> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 20,
+              height: 0,
             ),
             Text(
               "Reset Password",
@@ -57,11 +57,11 @@ class _resetPasswordState extends State<resetPassword> {
               style: TextStyle(fontSize: 23, color: Colors.black),
             ),
             TextField(
-              decoration: InputDecoration(hintText: "****"),
+              decoration: InputDecoration(hintText: "**"),
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(
-              height: 40,
+              height: 30,
             ),
             Text(
               "Password",
@@ -73,7 +73,7 @@ class _resetPasswordState extends State<resetPassword> {
               style: TextStyle(fontSize: 20),
             ),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Text(
               "Confirm password",
@@ -84,19 +84,28 @@ class _resetPasswordState extends State<resetPassword> {
               decoration: InputDecoration(hintText: "Re-enter your password"),
               style: TextStyle(fontSize: 20),
             ),
-            Expanded(
-              child: Center(
-                child: InkWell(
-                  onTap: openSuccessPage,
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(7)),
-                        color: Colors.blueAccent),
-                    child: Text(
-                      "Change Password",
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
+            SizedBox(
+              height: 20,
+            ),
+            RaisedButton(
+              onPressed: openLoginPage,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80.0)),
+              padding: const EdgeInsets.all(0.0),
+              child: Ink(
+                decoration: const BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                ),
+                child: Container(
+                  constraints: const BoxConstraints(
+                      minWidth: 88.0,
+                      minHeight: 50.0), // min sizes for Material buttons
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Change Password',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

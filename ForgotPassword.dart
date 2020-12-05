@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_diary/ResetPassword.dart';
+import 'package:jour/ResetPassword.dart';
 import 'ResetPassword.dart';
 import 'LoginPage.dart';
 
@@ -63,17 +63,25 @@ class _forgotPasswordState extends State<forgotPassword> {
             SizedBox(
               height: 80,
             ),
-            Center(
-              child: InkWell(
-                onTap: openResetPassword,
+            RaisedButton(
+              onPressed: openResetPassword,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(80.0)),
+              padding: const EdgeInsets.all(0.0),
+              child: Ink(
+                decoration: const BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(80.0)),
+                ),
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(7)),
-                      color: Colors.blueAccent),
-                  child: Text(
-                    "Send Request",
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  constraints: const BoxConstraints(
+                      minWidth: 88.0,
+                      minHeight: 50.0), // min sizes for Material buttons
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Send Request',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    textAlign: TextAlign.center,
                   ),
                 ),
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_diary/SignUpPage.dart';
+import 'package:jour/SignUpPage.dart';
 import 'LoginPage.dart';
 
 class Onboarding extends StatelessWidget {
